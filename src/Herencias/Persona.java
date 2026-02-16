@@ -3,11 +3,19 @@ package Herencias;
 import java.util.Scanner;
 
 public class Persona {
-    protected Scanner teclado;
+    protected static Scanner teclado = new Scanner(System.in);
     protected String nombre;
     protected int edad;
-    public Persona(){
+   /** public Persona(){
         teclado = new Scanner(System.in);
+    }*/
+
+   public Persona(String nombre, int edad){
+       this.nombre=nombre;
+       this.edad=edad;
+   }
+    public  Persona(){
+
     }
 
     public void cargarDatosPersonales(){
